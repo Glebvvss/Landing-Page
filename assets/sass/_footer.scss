@@ -41,6 +41,12 @@ footer {
 
     .submit-btn {
       @extend %form-field;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        background-color: $orange_color;
+      }
     }
   }
 }

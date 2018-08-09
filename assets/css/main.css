@@ -1,5 +1,6 @@
 body {
   opacity: 0;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -9,6 +10,7 @@ h1, h2, h3 {
 
 .block {
   padding: 120px 0 120px 0;
+  opacity: 0;
 }
 
 .caption {
@@ -58,7 +60,7 @@ header nav {
     z-index: 123123;
   }
   header .nav-item {
-    margin-left: 30px;
+    margin-left: 10px;
   }
 }
 header .navbar-brand {
@@ -69,8 +71,6 @@ header .navbar-brand:hover {
 }
 header .nav-item a {
   color: white;
-  border: none;
-  border-radius: 15px;
   transition: 0.5s;
 }
 header .nav-item a:hover {
@@ -194,6 +194,13 @@ footer form .form-text-input {
 }
 footer form .form-textarea {
   width: 100%;
+}
+footer form .submit-btn {
+  cursor: pointer;
+  transition: 0.5s;
+}
+footer form .submit-btn:hover {
+  background-color: #e8874a;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,6 +9,7 @@ $main_font: 'Circe', sans-serif;
 
 body {
   opacity: 0;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -17,7 +18,8 @@ h1, h2, h3 {
 }
 
 .block {
-  padding: 120px 0 120px 0;   
+  padding: 120px 0 120px 0;
+  opacity: 0;
 }
 
 .caption {

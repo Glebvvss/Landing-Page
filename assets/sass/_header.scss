@@ -22,7 +22,7 @@ header {
     z-index: 123123;
 
     .nav-item {
-      margin-left: 30px;
+      margin-left: 10px;
     }
   } 
 
@@ -37,8 +37,6 @@ header {
   .nav-item {
     a {
       color: $menu_point_color;
-      border: none;
-      border-radius: 15px;
       transition: $transition;
 
       &:hover {

@@ -14,16 +14,19 @@
         <div class="navbar-collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">Про Нас</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#">Услуги</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="#">Мы предлагаем</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакты</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><b>+38 (097) 453-24-51</b></a>
@@ -55,7 +58,7 @@
         <div class="row">
 
           <div class="col-md-4">
-            <div class="sentence">
+            <div class="sentence" id="cart-1">
               <h3>Одностраничник</h3>
               <h1>от 2500 грн</h1>
               <ul>
@@ -73,7 +76,7 @@
           </div>
 
           <div class="col-md-4" >
-            <div class="sentence">
+            <div class="sentence" id="cart-2">
               <h3>Одностраничник</h3>
               <h1>от 5000 грн</h1>
               <ul>
@@ -91,7 +94,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="sentence">
+            <div class="sentence" id="cart-3">
               <h3>Одностраничник</h3>
               <h1>от 10000 грн</h1>
               <ul>
@@ -190,7 +193,7 @@
       </div>
     </div>
 
-    <footer class="block">
+    <footer id="footer" class="block">
       <h1 class="caption"><b>Контакты</b></h1>
       <p class="description"><i>"Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне."</i></p>
 
@@ -222,6 +225,9 @@
     </footer>
 
     <script src="assets/libs/jquery/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/navbar.js"></script>
+    <script type="module" src="assets/js/blocks.js"></script>
   </body>
 </html>
