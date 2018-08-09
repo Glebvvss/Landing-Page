@@ -2,7 +2,7 @@ $menu_point_color:       white;
 $menu_point_color_hover: #b7a56c;
 
 header {  
-  background-color: $black_color;
+  background-color: $orange_color;
   width: 100%;
 
   nav {
@@ -42,8 +42,7 @@ header {
       transition: $transition;
 
       &:hover {
-        color: $menu_point_color;
-        background: $black_color;
+        color: $light_gray_color;
       }
     }
   }
