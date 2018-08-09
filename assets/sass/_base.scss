@@ -8,37 +8,37 @@ $transition: 0.5s;
 $main_font: 'Circe', sans-serif;
 
 h1, h2, h3 {
-	text-align: center;
-	font-family: 'Circe', sans-serif;
+  text-align: center;
+  font-family: 'Circe', sans-serif;
 }
 
 .block {
-	padding: 120px 0 120px 0;		
+  padding: 120px 0 120px 0;   
 }
 
 .caption {
-	font-size: 50px;
-	margin-bottom: 50px;
-	font-family: 'Circe', sans-serif;
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-family: 'Circe', sans-serif;
 }
 
 .description {
-	text-align: center;
-	font-family: $main_font;
-	margin-top: 60px;
-	margin-bottom: 60px;
+  text-align: center;
+  font-family: $main_font;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 %btn {
-	border: none;
-	border-radius: 20px;
-	color: $white_color;
-	background-color: $black_color;
-	padding: 8px 25px 8px 25px;
-	transition: $transition;
+  border: none;
+  border-radius: 20px;
+  color: $white_color;
+  background-color: $black_color;
+  padding: 8px 25px 8px 25px;
+  transition: $transition;
 
-	&:hover {
-		color: $black_color;
-		background-color: $white_color;
-	}
+  &:hover {
+    color: $black_color;
+    background-color: $white_color;
+  }
 }

@@ -1,51 +1,51 @@
-$menu_point_color: 			 white;
+$menu_point_color:       white;
 $menu_point_color_hover: #b7a56c;
 
-header {	
-	background-color: $black_color;
-	width: 100%;
+header {  
+  background-color: $black_color;
+  width: 100%;
 
-	nav {
-		margin: 0 20px 0 20px;
-	}
+  nav {
+    margin: 0 20px 0 20px;
+  }
 
-	@media screen and (max-width: 992px) {
-		position: relative;
+  @media screen and (max-width: 992px) {
+    position: relative;
 
-		.nav-item {
-			margin-left: 0px;
-		}
-	}
+    .nav-item {
+      margin-left: 0px;
+    }
+  }
 
-	@media screen and (min-width: 992px) {
-		position: fixed;
-		z-index: 123123;
+  @media screen and (min-width: 992px) {
+    position: fixed;
+    z-index: 123123;
 
-		.nav-item {
-			margin-left: 30px;
-		}
-	}	
+    .nav-item {
+      margin-left: 30px;
+    }
+  } 
 
-	.navbar-brand {
-		color: $white_color;
+  .navbar-brand {
+    color: $white_color;
 
-		&:hover {
-			color: $white_color;
-		}
-	}
+    &:hover {
+      color: $white_color;
+    }
+  }
 
-	.nav-item {
-		a {
-			color: $menu_point_color;
-			border: none;
-			border-radius: 15px;
-			transition: $transition;
+  .nav-item {
+    a {
+      color: $menu_point_color;
+      border: none;
+      border-radius: 15px;
+      transition: $transition;
 
-			&:hover {
-				color: $menu_point_color;
-				background: $black_color;
-			}
-		}
-	}
+      &:hover {
+        color: $menu_point_color;
+        background: $black_color;
+      }
+    }
+  }
 
 }
