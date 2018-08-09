@@ -1,0 +1,46 @@
+%form-field {
+	border: solid 2px white;
+	background-color: black;
+	color: white;
+	border-radius: 25px;
+	padding: 10px 15px 10px 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+footer {
+	background-color: $black_color;
+	width: 100%;
+	color: $white_color;
+
+	.contact-info {
+		display: inline-block;
+		color: $white_color;
+		font-size: 20px;
+		margin-top: 5px;	
+		padding-bottom: 0;
+		width: inherit;
+	}
+
+	.underline {
+		width: 100%;
+		height: 3px;
+		background-color: $orange_color;
+	}
+
+	form {
+		.form-text-input {
+			@extend %form-field;
+			width: 100%;
+		}
+
+		.form-textarea {
+			@extend %form-field;
+			width: 100%;	
+		}
+
+		.submit-btn {
+			@extend %form-field;
+		}
+	}
+}
