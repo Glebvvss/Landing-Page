@@ -1,94 +1,105 @@
 (function( $ ){
 
-    const 
-        $document  = $(document),
-        $body      = $('body'),
-        $header    = $('header'),
-        transition = 500;
+  const 
+      $document  = $(document),
+      $body      = $('body'),
+      $header    = $('header'),
+      transition = 500;
 
-    //
-    const defaultStylesServicesBlock = () => {
-      $('.sentence').css({
-          transform: 'scale(0)',
-      });
+  const showBlockById = id => {
+    $('#' + id).animate({
+      opacity: '1'
+    }, 1000);
+  }
+
+  const blockAtFirstLocateOnScreen = id => {
+    let 
+        $positionTopBlock = $('#' + id).offset().top,
+        $scrollTop        = $body.scrollTop(),
+        screenHeight      = screen.height;
+
+    let startPointForShowAnimate = $positionTopBlock - screenHeight + 200;
+    if ( startPointForShowAnimate < $scrollTop )   {
+      return true;
     }
+    return false;
+  }
 
-    const defaultStylesPrivilegesBlock = () => {
-      $('#privileges').css({
-          transform: 'translateX(-100%)',
-      });
+  const showBlock = (id, callback = null) => {
+    if ( blockAtFirstLocateOnScreen(id) === true ) {
+      showBlockById(id);
+
+      if ( callback ) {
+        setTimeout(() => {
+          callback();
+        }, 500);   
+      }        
     }
+  };
 
-    const defaultStylesFooterBlock = () => {
-      $('.underline').css({
-          width: '0%',
-      });
-    }
+  const initShowBlockEvent = ( funcShowBlock ) => {
+    document.addEventListener('scroll', funcShowBlock );
+    document.addEventListener('DOMContentLoaded', funcShowBlock );
+  };
 
-    (function defaultStylesOfBloacks() {
-      defaultStylesServicesBlock();
-      defaultStylesPrivilegesBlock();
-      defaultStylesFooterBlock();
-    })();
-    //
+  //
+  const defaultStateServicesBlock = () => {
+    $('.sentence').css({
+        transform: 'scale(0)',
+    });
+  }
 
+  const defaultStatePrivilegesBlock = () => {
+    $('#privileges').css({
+        transform: 'translateX(-100%)',
+    });
+  }
 
-    const showBlockById = id => {
-      $('#' + id).animate({
-        opacity: '1'
-      }, 1000);
-    }
+  const defaultStateFooterBlock = () => {
+    $('.underline').css({
+        width: '0%',
+    });
+  }
 
-    const blockAtFirstLocateOnScreen = id => {
-      let 
-          $positionTopBlock = $('#' + id).offset().top,
-          $scrollTop        = $body.scrollTop(),
-          screenHeight      = screen.height;
+  (function defaultStatesOfBlocks() {
+    defaultStateServicesBlock();
+    defaultStatePrivilegesBlock();
+    defaultStateFooterBlock();
+  })();
+  //
 
-      let startPointForShowAnimate = $positionTopBlock - screenHeight + 200;
-      if ( startPointForShowAnimate < $scrollTop )   {
-        return true;
-      }
-      return false;
-    }
+  initShowBlockEvent(() => {
 
-    const showBlockByScroll = (id, callback = null) => {
-      $document.scroll(() => {
-        if ( blockAtFirstLocateOnScreen(id) === true ) {
-          showBlockById(id);
+    showBlock('about');
 
-          if (callback) {
-            setTimeout(() => {
-              callback();
-            }, 500);   
-          }        
-        }
-      });
-    }
-
-
-    //initial blocks
-    showBlockByScroll('about');
-
-    showBlockByScroll('service', () => {
+    showBlock('service', () => {
       $('.sentence').css({
         transform: 'scale(1)',
         transition: '500ms'
       });
     });
 
-    showBlockByScroll('privileges', () => {
+    showBlock('privileges', () => {
       $('#privileges').css({
         transform: 'translateX(0%)',
         transition: '1s'
       });
     });
 
-    showBlockByScroll('footer', () => {
+    showBlock('privileges', () => {
+      $('#privileges').css({
+        transform: 'translateX(0%)',
+        transition: '1s'
+      });
+    });
+
+    showBlock('footer', () => {
       $('.underline').css({
         width: '100%',
         transition: '1s'
       });
     });
+
+  });
 
 })( jQuery );

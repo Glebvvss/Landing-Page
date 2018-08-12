@@ -18,17 +18,20 @@
         'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5)',
         'transition': '0.5s',           
       });
+    };    
+
+    const changeNavbarColorByScroll = () => {
+      let $scrollTop = $body.scrollTop();
+      if ( $scrollTop === 0 ) {
+        $orangeNavbar();
+      } else {
+        $blackNavbar();
+      }
     };
 
-    (function changeNavbarColorByScroll() {
-      $document.scroll(() => {
-        let $scrollTop = $body.scrollTop();
-        if ( $scrollTop === 0 ) {
-          $orangeNavbar();
-        } else {
-          $blackNavbar();
-        }
-      });
+    (function initNavbarEvent() {
+      document.addEventListener('scroll', changeNavbarColorByScroll);
+      document.addEventListener('DOMContentLoaded', changeNavbarColorByScroll);
     })();
 
 })( jQuery );
